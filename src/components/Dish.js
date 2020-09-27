@@ -6,8 +6,9 @@ const Dish = (dish, handleDetailDish) => (
   <li className='list-item'>
     <div className='dish-actions'>
       <div className=''>
-        <h3>{dish.category}</h3>
-        <h1>{dish.name}</h1>
+        <h2>ID: {dish.id}</h2>
+        <h3>Dish category: {dish.category}</h3>
+        <h1>Dish name:{dish.name}</h1>
         <button onClick={() => handleDetailDish(dish.id)}>Recipe</button>
       </div>
     </div>
@@ -15,11 +16,9 @@ const Dish = (dish, handleDetailDish) => (
 );
 
 Dish.propTypes = {
-  dish: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired
-  }).isRequired,
+  id: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   handleDetailDish: PropTypes.func.isRequired
 };
 

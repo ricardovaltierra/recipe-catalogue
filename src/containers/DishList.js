@@ -23,17 +23,13 @@ const renderList = ({
 }) => (
   <div>
     <ul>
-      {
+    {
         state.dishes.map(dish => {
-          const fDish = filterDish(dish, state.filter);
-          if (fDish) {
-            return <Dish 
-              key={dish.id}
-              id={dish.id}
-              dish={dish}
-              handleDetailDish={handleDetailDish}
-            />
-          }
+          return <Dish 
+            key={dish.id}
+            {...dish}
+            handleDetailDish={handleDetailDish}
+          />
         })
       }
     </ul>
@@ -42,5 +38,6 @@ const renderList = ({
 
 const DishList = connect(
   mapStateToProps, mapDispatchToProps)(renderList);
+
 
 export default DishList;

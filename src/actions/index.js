@@ -1,4 +1,4 @@
-export { CHANGE_FILTER, SEARCH_DISH, GET_DISH } from '../helpers/actions';
+import { CHANGE_FILTER, SEARCH_DISH, GET_DISH } from '../helpers/actions';
 
 const changeFilter = filter => ({
   type: CHANGE_FILTER,
