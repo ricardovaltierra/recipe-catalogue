@@ -17,7 +17,7 @@ const dishes = (state = initialState, action) => {
       return {
         dishes: action.payload,
         loading: false,
-        hasErrors: false,
+        hasErrors: false
       };
     case GET_DISHES_FAILURE:
       return {

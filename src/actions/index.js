@@ -6,9 +6,9 @@ import { APP_ID, APP_KEY } from '../helpers/credentials';
 //   name
 // });
 
-const detailDish = id => ({
+const detailDish = dish => ({
   type: DETAIL_DISH,
-  id
+  dish
 });
 
 const getDishes = () => ({ type: GET_DISHES });
@@ -34,4 +34,4 @@ const fetchAllDishes = () => {
   }
 };
 
-export { detailDish, getDishes, getDishesSuccess, getDishesFailure, fetchAllDishes };
+export { getDishes, getDishesSuccess, getDishesFailure, fetchAllDishes, detailDish };

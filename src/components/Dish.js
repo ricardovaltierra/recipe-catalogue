@@ -3,16 +3,13 @@ import PropTypes from 'prop-types';
 
 export const Dish = ({ dish, handleDetailDish }) => (
   <div onClick={() => handleDetailDish(dish)}>
-    <h2>ID: {dish.dish.uri}</h2>
-    <h3>Dish category: {dish.dish.healthLabels[0]}</h3>
-    <h1>Dish name:{dish.dish.label}</h1>
-    <img src={dish.dish.image} size='50px' alt={dish.dish.label}/>
+    <h2>ID: {dish.recipe.uri}</h2>
+    <h3>Dish category: {dish.recipe.healthLabels[0]}</h3>
+    <h1>Dish name:{dish.recipe.label}</h1>
+    <img src={dish.recipe.image} size='50px' alt={dish.recipe.label}/>
   </div>
 );
 
 Dish.propTypes = {
-  dish: PropTypes.arrayOf(PropTypes.object).isRequired,
-  handleDetailDish: PropTypes.func.isRequired
+  dish: PropTypes.any.isRequired
 };
-
-export default Dish;

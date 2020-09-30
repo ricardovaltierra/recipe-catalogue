@@ -8,18 +8,15 @@ const DishList = ({ dispatch, loading, dishes, hasErrors }) => {
     dispatch(fetchAllDishes());
   }, [dispatch]);
 
-console.log(`log from DishList: ${dishes}`);
-
 const renderDishes = () => {
   if(loading) return <>Loading...</>;
   if(hasErrors) return <>Unable to load recipes, please try again.</>;
-  // return dishes.map(dish => <Dish key={dish.recipe.uri} dish={dish} />);
+  return dishes.map(dish => <Dish key={dish.recipe.uri} dish={dish} />);
 };
-
 return (
   <section>
     <h1>Recipes</h1>
-    {/* {renderDishes()} */}
+    {renderDishes()}
   </section>
 );
 };
