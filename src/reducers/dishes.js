@@ -1,35 +1,31 @@
-import { CHANGE_FILTER, SEARCH_DISH, GET_DISH } from '../helpers/actions';
+import { DETAIL_DISH, GET_DISHES, GET_DISHES_SUCCESS, GET_DISHES_FAILURE } from '../helpers/actions';
 
-const APP_ID = '789113e3';
-const APP_KEY = '656ad9f53643ec779ce741bbadc8adca';
-
-let dishList = [];
-
-const getData = async () => {
-  const response = await fetch(
-    `https://api.edamam.com/search?app_id=${APP_ID}&app_key=${APP_KEY}&q=pizza`
-  );
-  const Data = await response.json();
-  Data.hits.map(hit => {
-    dishList.push({ 
-      id: hit.recipe.uri,
-      category: hit.recipe.healthLabels[0],
-      name: hit.recipe.label 
-    });
-  });
+export const initialState = {
+  loading: false,
+  hasErrors: false,
+  dishes: []
 };
 
-getData();
-
-const setList = (dataList) => {
-
-}
-
-
-const dishes = (state = dishList, action) => {
-  console.log(state[0]);
+const dishes = (state = initialState, action) => {
   switch(action.type) {
-    case SEARCH_DISH:
+    case GET_DISHES:
+      return {
+        ...state, 
+        loading: true
+      };
+    case GET_DISHES_SUCCESS:
+      return {
+        dishes: action.payload,
+        loading: false,
+        hasErrors: false,
+      };
+    case GET_DISHES_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        hasErrors: true
+      }
+    case DETAIL_DISH:
       return state;
     default:
       return state;

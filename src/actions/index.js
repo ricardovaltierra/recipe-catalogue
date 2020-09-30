@@ -1,18 +1,37 @@
-import { CHANGE_FILTER, SEARCH_DISH, GET_DISH } from '../helpers/actions';
+import { DETAIL_DISH, GET_DISHES, GET_DISHES_SUCCESS, GET_DISHES_FAILURE } from '../helpers/actions';
+import { APP_ID, APP_KEY } from '../helpers/credentials'; 
 
-const changeFilter = filter => ({
-  type: CHANGE_FILTER,
-  filter
-});
-
-const searchDish = name => ({
-  type: SEARCH_DISH,
-  name
-});
+// const searchDish = name => ({
+//   type: SEARCH_DISH,
+//   name
+// });
 
 const detailDish = id => ({
-  type: GET_DISH,
+  type: DETAIL_DISH,
   id
 });
 
-export { changeFilter, searchDish, detailDish };
+const getDishes = () => ({ type: GET_DISHES });
+const getDishesSuccess = dishes => ({ 
+  type: GET_DISHES_SUCCESS,
+  payload: dishes
+});
+const getDishesFailure = () => ({ type: GET_DISHES_FAILURE });
+
+const fetchAllDishes = () => {
+  return async (dispatch) => {
+    dispatch(getDishes());
+    try {
+      const response = await fetch(
+        `https://api.edamam.com/search?app_id=${APP_ID}&app_key=${APP_KEY}&q=pizza`
+      );
+      const Data = await response.json();
+      console.log(Data.hits);
+      dispatch(getDishesSuccess(Data.hits));
+    } catch (error) {
+      dispatch(getDishesFailure());
+    }
+  }
+};
+
+export { detailDish, getDishes, getDishesSuccess, getDishesFailure, fetchAllDishes };

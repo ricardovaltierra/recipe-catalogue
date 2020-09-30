@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import dishes from './dishes';
-import filter from './filter';
 
-export default combineReducers({ dishes, filter });
+const rootReducer = combineReducers({ dishes: dishes });
+
+export default rootReducer;

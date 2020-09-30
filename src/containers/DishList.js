@@ -1,43 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import Dish from '../components/Dish';
-// import CategoryFilter from '../components/CategoryFilter';
-import { searchDish, changeFilter, detailDish } from '../actions/index';
+import { fetchAllDishes } from '../actions/index';
+import { Dish } from '../components/Dish';
 
-const filterDish = (dish, currentFilter) => {
-  if(currentFilter === 'All') return dish;
-  if(currentFilter === dish.category) return dish;
-  return false;
+const DishList = ({ dispatch, loading, dishes, hasErrors }) => {
+  useEffect(() => {
+    dispatch(fetchAllDishes());
+  }, [dispatch]);
+
+console.log(`log from DishList: ${dishes}`);
+
+const renderDishes = () => {
+  if(loading) return <>Loading...</>;
+  if(hasErrors) return <>Unable to load recipes, please try again.</>;
+  // return dishes.map(dish => <Dish key={dish.recipe.uri} dish={dish} />);
 };
 
-const mapStateToProps = state => ({ state });
-
-const mapDispatchToProps = dispatch => ({
-  handleSearchDish: (name) => dispatch(searchDish(name)),
-  handleChangeFilter: (filter) => dispatch(changeFilter(filter)),
-  handleDetailDish: (id) => dispatch(detailDish(id)) ,
-});
-
-const renderList = ({
-  state, handleSearchDish, handleChangeFilter, handleDetailDish
-}) => (
-  <div>
-    <ul>
-    {
-        state.dishes.map(dish => {
-          return <Dish 
-            key={dish.id}
-            {...dish}
-            handleDetailDish={handleDetailDish}
-          />
-        })
-      }
-    </ul>
-  </div>
+return (
+  <section>
+    <h1>Recipes</h1>
+    {/* {renderDishes()} */}
+  </section>
 );
+};
 
-const DishList = connect(
-  mapStateToProps, mapDispatchToProps)(renderList);
+const mapStateToProps = state => ({ 
+  dishes: state.dishes.dishes,
+  loading: state.dishes.loading,
+  hasErrors: state.dishes.hasErrors
+ });
 
-
-export default DishList;
+export default connect(mapStateToProps)(DishList);
