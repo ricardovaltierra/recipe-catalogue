@@ -1,14 +1,9 @@
-import { DETAIL_DISH, GET_DISHES, GET_DISHES_SUCCESS, GET_DISHES_FAILURE } from '../helpers/actions';
+import { GET_DISHES, GET_DISHES_SUCCESS, GET_DISHES_FAILURE, SEARCH_DISH } from '../helpers/actions';
 import { APP_ID, APP_KEY } from '../helpers/credentials'; 
 
-// const searchDish = name => ({
-//   type: SEARCH_DISH,
-//   name
-// });
-
-const detailDish = dish => ({
-  type: DETAIL_DISH,
-  dish
+const searchDish = dishToSearch => ({
+  type: SEARCH_DISH,
+  dishToSearch: dishToSearch
 });
 
 const getDishes = () => ({ type: GET_DISHES });
@@ -19,6 +14,7 @@ const getDishesSuccess = dishes => ({
 const getDishesFailure = () => ({ type: GET_DISHES_FAILURE });
 
 const fetchAllDishes = (dishToSearch = 'random') => {
+  console.log(`lof grom fetchAllDishes receive -> ${dishToSearch}`);
   return async (dispatch) => {
     dispatch(getDishes());
     try {
@@ -34,4 +30,4 @@ const fetchAllDishes = (dishToSearch = 'random') => {
   }
 };
 
-export { getDishes, getDishesSuccess, getDishesFailure, fetchAllDishes, detailDish };
+export { getDishes, getDishesSuccess, getDishesFailure, fetchAllDishes, searchDish };

@@ -1,4 +1,4 @@
-import { DETAIL_DISH, GET_DISHES, GET_DISHES_SUCCESS, GET_DISHES_FAILURE } from '../helpers/actions';
+import { GET_DISHES, GET_DISHES_SUCCESS, GET_DISHES_FAILURE, SEARCH_DISH } from '../helpers/actions';
 
 export const initialState = {
   loading: false,
@@ -25,7 +25,8 @@ const dishes = (state = initialState, action) => {
         loading: false,
         hasErrors: true
       }
-    case DETAIL_DISH:
+    case SEARCH_DISH:
+      console.log('Log from SEARCH_DISH');
       return state;
     default:
       return state;

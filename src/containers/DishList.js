@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchAllDishes, detailDish } from '../actions/index';
+import { fetchAllDishes } from '../actions/index';
 import { Dish } from '../components/Dish';
+import { Navbar } from '../components/Navbar';
 
-const DishList = ({ handleFetchAllDishes, loading, dishes, hasErrors, handleDetailDish}) => {
+const DishList = ({ handleFetchAllDishes, loading, dishes, hasErrors, handleDetailDish, handleSearchDish }) => {
   useEffect(() => {
     handleFetchAllDishes();
   }, [handleFetchAllDishes]);
@@ -15,6 +16,7 @@ const renderDishes = () => {
 };
 return (
   <div>
+    <Navbar handleSearchDish={handleSearchDish}/>
     <section>
       <h1>Recipes</h1>
       {renderDishes()}
@@ -31,7 +33,7 @@ const mapStateToProps = state => ({
 
  const mapDispatchToProps = dispatch => ({
   handleFetchAllDishes: () => dispatch(fetchAllDishes()),
-  handleDetailDish: (dish) => dispatch(detailDish(dish))
+  handleSearchDish: (dishToSearch) => dispatch(fetchAllDishes(dishToSearch))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DishList);
