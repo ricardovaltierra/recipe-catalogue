@@ -15,10 +15,9 @@ const renderDishes = () => {
   return dishes.map(dish => <Dish key={dish.recipe.uri} dish={dish} handleDetailDish={handleDetailDish} />);
 };
 return (
-  <div>
+  <div className='main-wrapper'>
     <Navbar handleSearchDish={handleSearchDish}/>
-    <section>
-      <h1>Recipes</h1>
+    <section className='item-list'>
       {renderDishes()}
     </section>
   </div>
