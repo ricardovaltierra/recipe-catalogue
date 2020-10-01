@@ -1,23 +1,25 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchAllDishes } from '../actions/index';
+import { fetchAllDishes, detailDish } from '../actions/index';
 import { Dish } from '../components/Dish';
 
-const DishList = ({ dispatch, loading, dishes, hasErrors }) => {
+const DishList = ({ handleFetchAllDishes, loading, dishes, hasErrors, handleDetailDish}) => {
   useEffect(() => {
-    dispatch(fetchAllDishes());
-  }, [dispatch]);
+    handleFetchAllDishes();
+  }, [handleFetchAllDishes]);
 
 const renderDishes = () => {
   if(loading) return <>Loading...</>;
   if(hasErrors) return <>Unable to load recipes, please try again.</>;
-  return dishes.map(dish => <Dish key={dish.recipe.uri} dish={dish} />);
+  return dishes.map(dish => <Dish key={dish.recipe.uri} dish={dish} handleDetailDish={handleDetailDish} />);
 };
 return (
-  <section>
-    <h1>Recipes</h1>
-    {renderDishes()}
-  </section>
+  <div>
+    <section>
+      <h1>Recipes</h1>
+      {renderDishes()}
+    </section>
+  </div>
 );
 };
 
@@ -27,4 +29,9 @@ const mapStateToProps = state => ({
   hasErrors: state.dishes.hasErrors
  });
 
-export default connect(mapStateToProps)(DishList);
+ const mapDispatchToProps = dispatch => ({
+  handleFetchAllDishes: () => dispatch(fetchAllDishes()),
+  handleDetailDish: (dish) => dispatch(detailDish(dish))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(DishList);

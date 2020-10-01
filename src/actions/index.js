@@ -18,12 +18,12 @@ const getDishesSuccess = dishes => ({
 });
 const getDishesFailure = () => ({ type: GET_DISHES_FAILURE });
 
-const fetchAllDishes = () => {
+const fetchAllDishes = (dishToSearch = 'random') => {
   return async (dispatch) => {
     dispatch(getDishes());
     try {
       const response = await fetch(
-        `https://api.edamam.com/search?app_id=${APP_ID}&app_key=${APP_KEY}&q=pizza`
+        `https://api.edamam.com/search?app_id=${APP_ID}&app_key=${APP_KEY}&q=${dishToSearch}`
       );
       const Data = await response.json();
       console.log(Data.hits);
