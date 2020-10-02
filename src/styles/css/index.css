@@ -143,46 +143,43 @@ body {
       display: flex;
       flex-direction: column;
       min-width: 100%; }
-      body #root .main-wrapper .navbar {
+      body #root .main-wrapper .nav-top {
         position: relative;
-        width: 100%; }
-        body #root .main-wrapper .navbar .nav-top {
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        background-color: #000;
+        text-align: center;
+        height: 2.2em; }
+        body #root .main-wrapper .nav-top .nav-icon {
+          color: #c6c6c6;
+          font-size: 16px;
+          padding-top: 0.6em;
+          border: none;
+          cursor: pointer; }
+        body #root .main-wrapper .nav-top .nav-title {
           position: relative;
-          display: grid;
-          grid-template-columns: 20% 60% 20%;
-          background-color: #000;
-          text-align: center;
-          height: 2.2em; }
-          body #root .main-wrapper .navbar .nav-top .nav-icon {
-            color: #c6c6c6;
-            font-size: 16px;
-            padding-top: 0.6em;
-            border: none;
-            cursor: pointer; }
-          body #root .main-wrapper .navbar .nav-top .nav-title {
-            position: relative;
-            font-size: 16px;
-            padding-top: 0.6em;
-            color: #fffbb1; }
-        body #root .main-wrapper .navbar .search-bar {
+          font-size: 16px;
+          padding-top: 0.6em;
+          color: #fffbb1; }
+      body #root .main-wrapper .search-bar {
+        position: relative;
+        display: grid;
+        grid-template-columns: 80% 20%;
+        justify-content: center;
+        color: white;
+        padding: 5px;
+        text-decoration: none;
+        height: 2.2em; }
+        body #root .main-wrapper .search-bar .search-input {
           position: relative;
-          display: grid;
-          grid-template-columns: 80% 20%;
-          justify-content: center;
-          color: white;
+          border: none;
+          padding-left: 10px;
+          font-size: 12px; }
+        body #root .main-wrapper .search-bar .search-button {
+          position: relative;
+          border: none;
           padding: 5px;
-          text-decoration: none;
-          height: 2.2em; }
-          body #root .main-wrapper .navbar .search-bar .search-input {
-            position: relative;
-            border: none;
-            padding-left: 10px;
-            font-size: 12px; }
-          body #root .main-wrapper .navbar .search-bar .search-button {
-            position: relative;
-            border: none;
-            padding: 5px;
-            font-size: 12px; }
+          font-size: 12px; }
       body #root .main-wrapper .item-list .menu-item {
         position: relative;
         text-decoration: none;

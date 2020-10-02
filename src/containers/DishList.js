@@ -4,6 +4,8 @@ import { fetchAllDishes } from '../actions/index';
 import { Dish } from '../components/Dish';
 import { Navbar } from '../components/Navbar';
 
+
+
 const DishList = ({ handleFetchAllDishes, loading, dishes, hasErrors, handleDetailDish, handleSearchDish }) => {
   useEffect(() => {
     handleFetchAllDishes();

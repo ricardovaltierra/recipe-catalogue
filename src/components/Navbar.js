@@ -32,16 +32,9 @@ export class Navbar extends React.Component {
 
   render() {
     return (
-      <div className="navbar">
-        <div className='nav-top'>
-          <i className='nav-icon'>O</i>
-          <p className="nav-title">maindish</p>
-          <i onClick={this.dropdwonSearch} className='dropicon nav-icon'>Q</i>
-        </div>
-        <div className='search-bar'>
-          <input className='search-input' onChange={this.handleChange} type="text" value={this.state.input} placeholder='Type a dish...' />
-          <button className='search-button' type="button" onClick={this.handleSubmit}>Search</button>
-        </div>
+      <div className='search-bar'>
+        <input className='search-input' onChange={this.handleChange} type="text" value={this.state.input} placeholder='Type a dish...' />
+        <button className='search-button' type="button" onClick={this.handleSubmit}>Search</button>
       </div>
     );
   }
