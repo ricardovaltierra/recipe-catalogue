@@ -1,0 +1,63 @@
+.detail-wrapper {
+  width: 100%;
+  min-height: 100%;
+  color: white;
+  background-color: saddlebrown; }
+  .detail-wrapper a {
+    padding-top: 0.6em;
+    text-decoration: none; }
+  .detail-wrapper .detail-img {
+    position: relative;
+    display: grid;
+    height: 96vh;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Handlee', cursive; }
+    .detail-wrapper .detail-img .detail-tab {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      max-height: 7vh;
+      align-items: center;
+      justify-items: center;
+      background: rgba(0, 0, 0, 0.7);
+      font-size: 12px;
+      font-family: 'Handlee', cursive;
+      text-align: center; }
+      .detail-wrapper .detail-img .detail-tab .tab-item {
+        position: relative;
+        width: 100%; }
+      .detail-wrapper .detail-img .detail-tab .tab-item:active {
+        color: #000; }
+    .detail-wrapper .detail-img .details {
+      position: relative;
+      background: rgba(0, 0, 0, 0.8);
+      overflow: hidden;
+      align-self: end;
+      padding: 1.5vh; }
+      .detail-wrapper .detail-img .details .detail-prev {
+        font-size: 10px; }
+        .detail-wrapper .detail-img .details .detail-prev .detail-main {
+          position: relative;
+          display: grid;
+          width: 100%;
+          grid-template-columns: 80% auto;
+          align-items: center;
+          margin-bottom: 1vh; }
+          .detail-wrapper .detail-img .details .detail-prev .detail-main .detail-title {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 11px; }
+          .detail-wrapper .detail-img .details .detail-prev .detail-main .detail-calories {
+            text-align: center; }
+        .detail-wrapper .detail-img .details .detail-prev .detail-source {
+          font-size: 9px;
+          color: rgba(196, 196, 196, 0.959); }
+  .detail-wrapper .detail-error {
+    position: relative;
+    margin: 10rem 5rem;
+    text-align: center;
+    color: #202020; }
+
+/*# sourceMappingURL=detail.css.map */

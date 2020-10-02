@@ -129,92 +129,159 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.nav-top {
+  position: relative;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  background-color: #000;
+  text-align: center;
+  height: 2.2em; }
+  .nav-top .nav-icon {
+    color: #c6c6c6;
+    font-size: 16px;
+    padding-top: 0.6em !important;
+    border: none;
+    cursor: pointer; }
+  .nav-top .nav-title {
+    position: relative;
+    font-size: 16px;
+    padding-top: 0.6em;
+    color: #fffbb1; }
+
+.search-bar {
+  position: relative;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  justify-content: center;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  height: 2.2em; }
+  .search-bar .search-input {
+    position: relative;
+    border: none;
+    padding-left: 10px;
+    font-size: 12px; }
+  .search-bar .search-button {
+    position: relative;
+    border: none;
+    padding: 5px;
+    font-size: 12px; }
+
+.item-list .menu-item {
+  position: relative;
+  text-decoration: none;
+  color: white; }
+  .item-list .menu-item .item-img {
+    position: relative;
+    display: grid;
+    height: 30vh;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: end;
+    font-family: 'Open Sans', sans-serif; }
+    .item-list .menu-item .item-img .item-description {
+      position: relative;
+      background: rgba(0, 0, 0, 0.7);
+      max-height: 38%;
+      padding: 0.8rem;
+      font-size: 12px;
+      overflow: hidden; }
+      .item-list .menu-item .item-img .item-description .item-title {
+        position: relative;
+        margin-bottom: 0.4rem; }
+      .item-list .menu-item .item-img .item-description .item-cal-ing {
+        position: relative;
+        display: flex;
+        font-family: 'Handlee', cursive;
+        font-size: 12px; }
+        .item-list .menu-item .item-img .item-description .item-cal-ing .item-calories {
+          position: relative;
+          margin-right: 0.5rem; }
+        .item-list .menu-item .item-img .item-description .item-cal-ing .item-ingredient {
+          position: relative;
+          margin-left: 0.5rem; }
+    .item-list .menu-item .item-img .item-description:hover {
+      max-height: 48%; }
+
+.detail-wrapper {
+  width: 100%;
+  min-height: 100%;
+  color: white;
+  background-color: saddlebrown; }
+  .detail-wrapper a {
+    padding-top: 0.6em;
+    text-decoration: none; }
+  .detail-wrapper .detail-img {
+    position: relative;
+    display: grid;
+    height: 96vh;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Handlee', cursive; }
+    .detail-wrapper .detail-img .detail-tab {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      max-height: 7vh;
+      align-items: center;
+      justify-items: center;
+      background: rgba(0, 0, 0, 0.7);
+      font-size: 12px;
+      font-family: 'Handlee', cursive;
+      text-align: center; }
+      .detail-wrapper .detail-img .detail-tab .tab-item {
+        position: relative;
+        width: 100%; }
+      .detail-wrapper .detail-img .detail-tab .tab-item:active {
+        color: #000; }
+    .detail-wrapper .detail-img .details {
+      position: relative;
+      background: rgba(0, 0, 0, 0.8);
+      overflow: hidden;
+      align-self: end;
+      padding: 1.5vh; }
+      .detail-wrapper .detail-img .details .detail-prev {
+        font-size: 10px; }
+        .detail-wrapper .detail-img .details .detail-prev .detail-main {
+          position: relative;
+          display: grid;
+          width: 100%;
+          grid-template-columns: 80% auto;
+          align-items: center;
+          margin-bottom: 1vh; }
+          .detail-wrapper .detail-img .details .detail-prev .detail-main .detail-title {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 11px; }
+          .detail-wrapper .detail-img .details .detail-prev .detail-main .detail-calories {
+            text-align: center; }
+        .detail-wrapper .detail-img .details .detail-prev .detail-source {
+          font-size: 9px;
+          color: rgba(196, 196, 196, 0.959); }
+  .detail-wrapper .detail-error {
+    position: relative;
+    margin: 10rem 5rem;
+    text-align: center;
+    color: #202020; }
+
 body {
   position: relative;
   display: grid;
-  background-color: #ccc; }
+  background-color: #ccc;
+  height: 100vh; }
   body #root {
     position: relative;
     display: flex;
     width: 100%;
+    min-width: 100%;
     font-family: 'Secular One', sans-serif; }
     body #root .main-wrapper {
       position: relative;
       display: flex;
       flex-direction: column;
       min-width: 100%; }
-      body #root .main-wrapper .nav-top {
-        position: relative;
-        display: grid;
-        grid-template-columns: 20% 60% 20%;
-        background-color: #000;
-        text-align: center;
-        height: 2.2em; }
-        body #root .main-wrapper .nav-top .nav-icon {
-          color: #c6c6c6;
-          font-size: 16px;
-          padding-top: 0.6em;
-          border: none;
-          cursor: pointer; }
-        body #root .main-wrapper .nav-top .nav-title {
-          position: relative;
-          font-size: 16px;
-          padding-top: 0.6em;
-          color: #fffbb1; }
-      body #root .main-wrapper .search-bar {
-        position: relative;
-        display: grid;
-        grid-template-columns: 80% 20%;
-        justify-content: center;
-        color: white;
-        padding: 5px;
-        text-decoration: none;
-        height: 2.2em; }
-        body #root .main-wrapper .search-bar .search-input {
-          position: relative;
-          border: none;
-          padding-left: 10px;
-          font-size: 12px; }
-        body #root .main-wrapper .search-bar .search-button {
-          position: relative;
-          border: none;
-          padding: 5px;
-          font-size: 12px; }
-      body #root .main-wrapper .item-list .menu-item {
-        position: relative;
-        text-decoration: none;
-        color: white; }
-        body #root .main-wrapper .item-list .menu-item .item-img {
-          position: relative;
-          display: grid;
-          height: 160px;
-          background-color: #000;
-          background-repeat: no-repeat;
-          background-size: cover;
-          align-items: end;
-          font-family: 'Open Sans', sans-serif; }
-          body #root .main-wrapper .item-list .menu-item .item-img .item-description {
-            position: relative;
-            background: rgba(0, 0, 0, 0.7);
-            max-height: 38%;
-            padding: 0.8rem;
-            font-size: 12px;
-            overflow: hidden; }
-            body #root .main-wrapper .item-list .menu-item .item-img .item-description .item-title {
-              position: relative;
-              margin-bottom: 0.4rem; }
-            body #root .main-wrapper .item-list .menu-item .item-img .item-description .item-cal-ing {
-              position: relative;
-              display: flex;
-              font-family: 'Handlee', cursive;
-              font-size: 12px; }
-              body #root .main-wrapper .item-list .menu-item .item-img .item-description .item-cal-ing .item-calories {
-                position: relative;
-                margin-right: 0.5rem; }
-              body #root .main-wrapper .item-list .menu-item .item-img .item-description .item-cal-ing .item-ingredient {
-                position: relative;
-                margin-left: 0.5rem; }
-          body #root .main-wrapper .item-list .menu-item .item-img .item-description:hover {
-            max-height: 48%; }
 
 /*# sourceMappingURL=index.css.map */

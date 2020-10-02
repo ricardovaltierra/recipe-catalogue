@@ -1,0 +1,92 @@
+
+.detail-wrapper {
+  width: 100%;
+  min-height: 100%;
+  color: white;
+  background-color: saddlebrown;
+
+  a {
+    padding-top: 0.6em;
+    text-decoration: none;
+  }
+
+  .detail-img {
+    position: relative;
+    display: grid;
+    height: 96vh;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Handlee', cursive;
+
+    .detail-tab {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      max-height: 7vh;
+      align-items: center;
+      justify-items: center;
+      background: rgba(0,0,0,0.7);
+      font-size: 12px;
+      font-family: 'Handlee', cursive;
+      text-align: center;
+
+      .tab-item {
+        position: relative;
+        width: 100%;
+      }
+
+      .tab-item:active {
+        color: #000;
+      }
+    }
+
+    .details {
+      position: relative;
+      background: rgba(0,0,0,0.8);
+      overflow: hidden;
+      align-self: end;
+      padding: 1.5vh;
+
+      .detail-prev {
+        font-size: 10px;
+
+        .detail-main {
+          position: relative;
+          display: grid;
+          width: 100%;
+          grid-template-columns: 80% auto;
+          align-items: center;
+          margin-bottom: 1vh;
+
+          .detail-title {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 11px;
+          }
+
+          .detail-calories {
+            text-align: center;
+          }
+        }
+
+        .detail-source {
+          font-size: 9px;
+          color: rgba(196, 196, 196, 0.959);
+        }
+
+      }
+    
+      .detail-category {
+    
+      }
+    }
+  }
+
+  .detail-error {
+    position: relative;
+    margin: 10rem 5rem;
+    text-align: center;
+    color: rgb(32, 32, 32);
+  }
+}
