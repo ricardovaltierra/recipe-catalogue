@@ -144,7 +144,7 @@ table {
     cursor: pointer; }
   .nav-top .nav-title {
     position: relative;
-    font-size: 16px;
+    font-size: 18px;
     padding-top: 0.6em;
     color: #fffbb1; }
 
@@ -230,7 +230,7 @@ table {
       align-items: center;
       justify-items: center;
       background: rgba(0, 0, 0, 0.7);
-      font-size: 12px;
+      font-size: 14px;
       font-family: 'Handlee', cursive;
       text-align: center; }
       .detail-wrapper .detail-img .detail-tab .tab-item {
@@ -244,8 +244,11 @@ table {
       overflow: hidden;
       align-self: end;
       padding: 1.5vh; }
+      .detail-wrapper .detail-img .details .detail-title {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px; }
       .detail-wrapper .detail-img .details .detail-prev {
-        font-size: 10px; }
+        font-size: 12px; }
         .detail-wrapper .detail-img .details .detail-prev .detail-main {
           position: relative;
           display: grid;
@@ -253,14 +256,40 @@ table {
           grid-template-columns: 80% auto;
           align-items: center;
           margin-bottom: 1vh; }
-          .detail-wrapper .detail-img .details .detail-prev .detail-main .detail-title {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 11px; }
           .detail-wrapper .detail-img .details .detail-prev .detail-main .detail-calories {
             text-align: center; }
         .detail-wrapper .detail-img .details .detail-prev .detail-source {
-          font-size: 9px;
+          font-size: 11px;
           color: rgba(196, 196, 196, 0.959); }
+      .detail-wrapper .detail-img .details .detail-ingredients .detail-ul-hl {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        max-height: 27px;
+        gap: 1rem;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 10px;
+        margin: 0.4rem 0;
+        overflow: auto; }
+        .detail-wrapper .detail-img .details .detail-ingredients .detail-ul-hl .detail-li-hl {
+          border-radius: 40px;
+          padding: 0.2rem;
+          text-align: center;
+          color: rgba(0, 0, 0, 0.7);
+          background: #f1f1f1; }
+      .detail-wrapper .detail-img .details .detail-ingredients .detail-ul-ig .detail-li-ig {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding: 0.2rem;
+        font-size: 10px;
+        overflow: visible; }
+        .detail-wrapper .detail-img .details .detail-ingredients .detail-ul-ig .detail-li-ig .check-ig {
+          margin-top: 0.2rem; }
+        .detail-wrapper .detail-img .details .detail-ingredients .detail-ul-ig .detail-li-ig label {
+          margin: 0.2rem;
+          padding-top: 0.2rem; }
   .detail-wrapper .detail-error {
     position: relative;
     margin: 10rem 5rem;
