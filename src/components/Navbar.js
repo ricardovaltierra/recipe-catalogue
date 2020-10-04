@@ -10,6 +10,7 @@ export class Navbar extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDropSearch = this.handleDropSearch.bind(this);
   }
 
   handleChange(e){
@@ -24,10 +25,9 @@ export class Navbar extends React.Component {
     this.props.handleSearchDish(this.state.input || 'random');
   }
 
-  dropdwonSearch() {
-    const dropdownSearch = document.getElementById('dropdownSearch');
-    dropdownSearch.classList.toggle('show');
-    console.log(`Click on dropdwon class-> ${dropdownSearch.classList}`);
+  handleDropSearch() {
+    const dropdownSearch = document.getElementById('search-nav');
+    dropdownSearch.classList.toggle('hide');
   }
 
   render() {
@@ -36,9 +36,9 @@ export class Navbar extends React.Component {
       <div className='nav-top'>
         <i className='gearicon nav-icon'></i>
         <p className="nav-title">maindish</p>
-        <i className='dropicon nav-icon'>Q</i>
+        <i className='dropicon nav-icon' onClick={this.handleDropSearch}>Q</i>
       </div>
-      <div className='search-bar'>
+      <div className='search-bar' id ='search-nav'>
         <input className='search-input' onChange={this.handleChange} type="text" value={this.state.input} placeholder='Type a dish...' />
         <button className='search-button' type="button" onClick={this.handleSubmit}>Search</button>
       </div>

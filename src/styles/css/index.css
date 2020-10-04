@@ -130,23 +130,31 @@ table {
   border-spacing: 0; }
 
 .nav-top {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
   display: grid;
   grid-template-columns: 20% 60% 20%;
   background-color: #000;
   text-align: center;
   height: 2.2em; }
+  .nav-top .gearicon {
+    color: transparent;
+    background: url("../icons/gear.png") no-repeat center;
+    width: 100%;
+    height: 100%;
+    background-size: 1.3rem; }
   .nav-top .nav-icon {
     color: #c6c6c6;
     font-size: 16px;
-    padding-top: 0.6em !important;
     border: none;
     cursor: pointer; }
   .nav-top .dropicon {
     color: transparent;
-    background-image: url("../icons/search.png");
-    background-repeat: no-repeat;
-    background-size: cover; }
+    background: url("../icons/search.png") no-repeat center;
+    width: 100%;
+    height: 100%;
+    background-size: 1.3rem; }
   .nav-top .nav-title {
     position: relative;
     font-size: 18px;
@@ -155,6 +163,9 @@ table {
 
 .search-bar {
   position: relative;
+  margin-top: 2.2rem;
+  width: 100%;
+  z-index: 999;
   display: grid;
   grid-template-columns: 80% 20%;
   justify-content: center;
@@ -210,15 +221,28 @@ table {
     .item-list .menu-item .item-img .item-description:hover {
       max-height: 48%; }
 
+.hide {
+  display: none; }
+
 .detail-wrapper {
   width: 100%;
   min-height: 100%;
   color: white; }
   .detail-wrapper a {
-    padding-top: 0.6em;
-    text-decoration: none; }
+    color: #c6c6c6;
+    text-decoration: none;
+    cursor: pointer; }
+    .detail-wrapper a .arrowicon {
+      color: transparent;
+      background: url("../icons/arrow.png") no-repeat center;
+      width: 100%;
+      height: 100%;
+      font-size: 32px;
+      background-size: 1.3rem;
+      padding-bottom: 0.1rem; }
   .detail-wrapper .detail-img {
     position: relative;
+    margin-top: 2.2rem;
     display: grid;
     height: 96vh;
     background-color: #000;
@@ -245,7 +269,6 @@ table {
     .detail-wrapper .detail-img .details {
       position: relative;
       background: rgba(0, 0, 0, 0.8);
-      overflow: hidden;
       align-self: end;
       padding: 1.5vh; }
       .detail-wrapper .detail-img .details .detail-title {

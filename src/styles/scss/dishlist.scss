@@ -1,7 +1,9 @@
 $gray1: #c6c6c6;
 
   .nav-top {
-    position: relative;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
     display: grid;
     grid-template-columns: 20% 60% 20%;
     background-color: #000;
@@ -19,7 +21,6 @@ $gray1: #c6c6c6;
     .nav-icon {
       color: $gray1;
       font-size: 16px;
-      padding-top: 0.6em !important;
       border: none;
       cursor: pointer;
     }
@@ -42,6 +43,9 @@ $gray1: #c6c6c6;
 
   .search-bar {
     position: relative;
+    margin-top: 2.2rem;
+    width: 100%;
+    z-index: 999;
     display: grid;
     grid-template-columns: 80% 20%;
     justify-content: center;
@@ -119,4 +123,8 @@ $gray1: #c6c6c6;
       }
     }
   }
+}
+
+.hide {
+  display: none;
 }

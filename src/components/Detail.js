@@ -107,10 +107,10 @@ class Detail extends React.Component {
         <div className='detail-wrapper'>
           <div className='nav-top'>
             <Link to={{pathname: '/'}} className='return-link'>
-            <i className='nav-icon'>V</i>
+            <i className='arrowicon nav-icon'>V</i>
             </Link>
             <p className="nav-title">maindish</p>
-            <i className='dropicon nav-icon'>Q</i>
+            <i className='nav-icon'></i>
           </div>
           <span style={{ backgroundImage: 'url(' + this.state.dish.image + ')' }} className='detail-img'>
             <div className='detail-tab'>
@@ -129,10 +129,10 @@ class Detail extends React.Component {
         <div className='detail-wrapper'>
           <div className='nav-top'>
             <Link to={{pathname: '/'}}>
-              <i className='nav-icon'>V</i>
+              <i className='arrowicon nav-icon'>V</i>
             </Link>
             <p className="nav-title">maindish</p>
-            <i className='dropicon nav-icon'>Q</i>
+            <i className='nav-icon'></i>
           </div>
           <h1 className='detail-error'>Page not found :(</h1>
         </div>
