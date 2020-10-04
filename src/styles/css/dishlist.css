@@ -11,6 +11,11 @@
     padding-top: 0.6em !important;
     border: none;
     cursor: pointer; }
+  .nav-top .dropicon {
+    color: transparent;
+    background-image: url("../icons/search.png");
+    background-repeat: no-repeat;
+    background-size: cover; }
   .nav-top .nav-title {
     position: relative;
     font-size: 18px;

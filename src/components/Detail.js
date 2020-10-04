@@ -31,6 +31,7 @@ class Detail extends React.Component {
         currentTab = this.state.ingredients;
         break;
       case 'Facts':
+        console.log(this.state.dish.totalDaily);
         currentTab = this.state.facts;
         break;
       default:
@@ -43,40 +44,50 @@ class Detail extends React.Component {
   }
 
   componentWillMount(){
+    try {
     const dish = this.props.location.dish;
-      const Preview = () => (
-        <div className='detail-prev'>
-          <div className='detail-main'>
-            <h2 className='detail-title'>{dish.label}</h2>
-            <p className='detail-calories'>{Number(dish.calories.toFixed(0))} cal</p>
-          </div>
-          <p className='detail-source'>Posted by <strong>{dish.source}</strong></p>
-        </div>
-      );
-      const Ingredients = () => (
-        <div className='detail-ingredients'>
+
+    const Preview = () => (
+      <div className='detail-prev'>
+        <div className='detail-main'>
           <h2 className='detail-title'>{dish.label}</h2>
-          <div className='detail-ul-hl'>
-            {
-              dish.healthLabels.map(label => {
-              return  <p className='detail-li-hl' key={ label.substring(0,2).concat(getRandomID()) }>{ label }</p> 
-              })
-            }
-          </div>
-          <ul className='detail-ul-ig'>
-            {
-              dish.ingredients.map(ingredient => {
-              return  <li className='detail-li-ig' key={ ingredient.text.substring(0,2).concat(getRandomID()) }><input type='checkbox' class='check-ig'/><label for='checkbox'><span>{ ingredient.text }</span></label></li> 
-              })
-            }
-          </ul>
+          <p className='detail-calories'>{Number(dish.calories.toFixed(0))} cal</p>
         </div>
-      );
-      const Facts = () => (
-        <div className='detail-facts'>
-          <h1>Example</h1>
+        <p className='detail-source'>Posted by <strong>{dish.source}</strong></p>
+      </div>
+    );
+    const Ingredients = () => (
+      <div className='detail-ingredients'>
+        <h2 className='detail-title'>{dish.label}</h2>
+        <div className='detail-ul-hl'>
+          {
+            dish.healthLabels.map(label => {
+            return  <p className='detail-li-hl' key={ label.substring(0,2).concat(getRandomID()) }>{ label }</p> 
+            })
+          }
         </div>
-      );
+        <ul className='detail-ul-ig'>
+          {
+            dish.ingredients.map(ingredient => {
+            return  <li className='detail-li-ig' key={ ingredient.text.substring(0,2).concat(getRandomID()) }><input type='checkbox' className='check-ig'/><label htmlFor='checkbox'><span>{ ingredient.text }</span></label></li> 
+            })
+          } 
+        </ul>
+      </div>
+    );
+    const Facts = () => (
+      <div className='detail-facts'>
+        <h2 className='detail-title'>{dish.label}</h2>
+        <div className='detail-ul-fa'>
+        {
+          Object.keys(dish.totalDaily).map((key, index) => {
+            const fact = dish.totalDaily[key];
+          return  <p className='detail-li-fa' key={ fact.label.substring(0,2).concat(getRandomID()) }><strong>{ fact.label }</strong><span>{'   ' +  Number(fact.quantity.toFixed(2)) + '%' }</span></p>
+          })
+        } 
+        </div>
+      </div>
+    );
 
     this.setState({
       dish: dish,
@@ -85,6 +96,9 @@ class Detail extends React.Component {
       facts: <Facts />,
       currentTab: <Preview />
     });
+  } catch (err) {
+    console.log(err.message);
+  }
   }
 
   render() {

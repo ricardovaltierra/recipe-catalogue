@@ -34,7 +34,7 @@ export class Navbar extends React.Component {
     return (
     <div className='navbar'>
       <div className='nav-top'>
-        <i className='nav-icon'>O</i>
+        <i className='gearicon nav-icon'></i>
         <p className="nav-title">maindish</p>
         <i className='dropicon nav-icon'>Q</i>
       </div>

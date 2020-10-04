@@ -3,7 +3,6 @@
   width: 100%;
   min-height: 100%;
   color: white;
-  background-color: saddlebrown;
 
   a {
     padding-top: 0.6em;
@@ -88,7 +87,6 @@
           font-family: 'Open Sans', sans-serif;
           font-size: 12px;
           margin: 0.4rem 0;
-          overflow: auto;
 
           .detail-li-hl {
             border-radius: 40px;
@@ -100,7 +98,6 @@
         }
 
         .detail-ul-ig {
-          
 
           .detail-li-ig {
             position: relative;
@@ -114,6 +111,7 @@
             
             .check-ig {
               margin-top: 0.2rem;
+              background: none;
             }
 
             label {
@@ -123,6 +121,31 @@
             }
           }
         }
+      }
+
+      .detail-facts {
+
+        .detail-ul-fa {
+          position: relative;
+          margin-top: 1rem;
+          font-size: 12px;
+
+          .detail-li-fa {
+            position: relative;
+            display: grid;
+            grid-template-columns: 50% auto;
+            margin-top: 0.2rem;
+
+            strong {
+              font-family: 'Open Sans', sans-serif;
+            }
+
+            span {
+              text-align: right;
+            }
+          }
+        }
+
       }
     }
   }

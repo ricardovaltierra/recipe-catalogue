@@ -142,6 +142,11 @@ table {
     padding-top: 0.6em !important;
     border: none;
     cursor: pointer; }
+  .nav-top .dropicon {
+    color: transparent;
+    background-image: url("../icons/search.png");
+    background-repeat: no-repeat;
+    background-size: cover; }
   .nav-top .nav-title {
     position: relative;
     font-size: 18px;
@@ -208,8 +213,7 @@ table {
 .detail-wrapper {
   width: 100%;
   min-height: 100%;
-  color: white;
-  background-color: saddlebrown; }
+  color: white; }
   .detail-wrapper a {
     padding-top: 0.6em;
     text-decoration: none; }
@@ -268,9 +272,8 @@ table {
         max-height: 27px;
         gap: 1rem;
         font-family: 'Open Sans', sans-serif;
-        font-size: 10px;
-        margin: 0.4rem 0;
-        overflow: auto; }
+        font-size: 12px;
+        margin: 0.4rem 0; }
         .detail-wrapper .detail-img .details .detail-ingredients .detail-ul-hl .detail-li-hl {
           border-radius: 40px;
           padding: 0.2rem;
@@ -284,12 +287,27 @@ table {
         height: 100%;
         padding: 0.2rem;
         font-size: 10px;
-        overflow: visible; }
+        overflow: visible;
+        font-size: 13px; }
         .detail-wrapper .detail-img .details .detail-ingredients .detail-ul-ig .detail-li-ig .check-ig {
-          margin-top: 0.2rem; }
+          margin-top: 0.2rem;
+          background: none; }
         .detail-wrapper .detail-img .details .detail-ingredients .detail-ul-ig .detail-li-ig label {
           margin: 0.2rem;
-          padding-top: 0.2rem; }
+          padding-top: 0.1rem; }
+      .detail-wrapper .detail-img .details .detail-facts .detail-ul-fa {
+        position: relative;
+        margin-top: 1rem;
+        font-size: 12px; }
+        .detail-wrapper .detail-img .details .detail-facts .detail-ul-fa .detail-li-fa {
+          position: relative;
+          display: grid;
+          grid-template-columns: 50% auto;
+          margin-top: 0.2rem; }
+          .detail-wrapper .detail-img .details .detail-facts .detail-ul-fa .detail-li-fa strong {
+            font-family: 'Open Sans', sans-serif; }
+          .detail-wrapper .detail-img .details .detail-facts .detail-ul-fa .detail-li-fa span {
+            text-align: right; }
   .detail-wrapper .detail-error {
     position: relative;
     margin: 10rem 5rem;

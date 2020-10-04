@@ -8,12 +8,28 @@ $gray1: #c6c6c6;
     text-align: center;
     height: 2.2em;
 
+    .gearicon {
+      color: transparent;
+      background: url('../icons/gear.png') no-repeat center;
+      width: 100%;
+      height: 100%;
+      background-size: 1.3rem;
+    }
+
     .nav-icon {
       color: $gray1;
       font-size: 16px;
       padding-top: 0.6em !important;
       border: none;
       cursor: pointer;
+    }
+
+    .dropicon {
+      color: transparent;
+      background: url('../icons/search.png') no-repeat center;
+      width: 100%;
+      height: 100%;
+      background-size: 1.3rem;
     }
   
     .nav-title {
