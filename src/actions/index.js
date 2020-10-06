@@ -22,7 +22,6 @@ const fetchAllDishes = (dishToSearch = 'random') => {
         `https://api.edamam.com/search?app_id=${APP_ID}&app_key=${APP_KEY}&q=${dishToSearch}`
       );
       const Data = await response.json();
-      console.log(Data.hits);
       dispatch(getDishesSuccess(Data.hits));
     } catch (error) {
       dispatch(getDishesFailure());
