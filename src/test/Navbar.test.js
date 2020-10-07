@@ -8,4 +8,4 @@ test('renders the correct content', () => {
   // Navbar and search-bar content
   getByText('maindish');
   getByText('Search');
-})
+});
