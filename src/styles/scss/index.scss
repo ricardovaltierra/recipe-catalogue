@@ -14,13 +14,16 @@ body {
     display: flex;
     width: 100%;
     min-width: 100%;
+    
     font-family: 'Secular One', sans-serif;
 
-    .main-wrapper {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      min-width: 100%;
-    }
+      .main-wrapper{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 100%;
+        
+      }
   }
 }
+
