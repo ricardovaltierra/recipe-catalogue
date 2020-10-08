@@ -11,6 +11,8 @@ const DishList = ({ handleFetchAllDishes, loading, dishes, hasErrors, handleDeta
     handleFetchAllDishes();
   }, [handleFetchAllDishes]);
 
+console.log(dishes);
+
 const renderDishes = () => {
   if(loading) return <div data-testid='loading'>Loading...</div>;
   if(hasErrors) return <div data-testid='error'>Unable to load recipes, please try again.</div>;

@@ -26,6 +26,7 @@ const dishes = (state = initialState, action) => {
         hasErrors: true
       }
     case SEARCH_DISH:
+      console.log('Log from SEARCH_DISH');
       return state;
     default:
       return state;
