@@ -66,6 +66,7 @@ Once you liked a particular dish, it's time to watch the ingredients! Click on i
     * [ESLint](https://eslint.org/)
     * [StyleLint](https://stylelint.io/)
     * [Babel](https://babeljs.io/)
+    * [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 
 ## Getting Started
 
