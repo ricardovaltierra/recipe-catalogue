@@ -12,8 +12,8 @@ const DishList = ({ handleFetchAllDishes, loading, dishes, hasErrors, handleDeta
   }, [handleFetchAllDishes]);
 
 const renderDishes = () => {
-  if(loading) return <div data-testid='loading'>Loading...</div>;
-  if(hasErrors) return <div data-testid='error'>Unable to load recipes, please try again.</div>;
+  if(loading) return <>Loading...</>;
+  if(hasErrors) return <>Unable to load recipes, please try again.</>;
   return dishes.map(dish => <Dish key={dish.recipe.uri} dish={dish} handleDetailDish={handleDetailDish} />);
 };
 return (

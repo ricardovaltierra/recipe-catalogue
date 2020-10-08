@@ -10,7 +10,7 @@ export const Dish = ({ dish }) => (
       dish: dish.recipe
       }
     } className='menu-item'>
-        <span style={{ backgroundImage: 'url(' + dish.recipe.image + ')' }} className='item-img' data-testid='resolved'>
+        <span style={{ backgroundImage: 'url(' + dish.recipe.image + ')' }} className='item-img'>
           <div className='item-description'>
             <h1 className='item-title'>{dish.recipe.label}</h1>
             <div className='item-cal-ing'>
