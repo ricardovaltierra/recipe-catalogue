@@ -8,11 +8,11 @@
 
 <p align="center">
   <br>
-   <a href="https://github.com/ricardovaltierra/recipe-catalogue" target="_blank"><strong>Explore the repo »</strong></a>
+   <a href="https://github.com/ricardovaltierra/recipe-catalogue"><strong>Explore the repo »</strong></a>
   <br>
-    <a href="https://github.com/ricardovaltierra/recipe-catalogue/issues" target="_blank">Request Feature</a>
+    <a href="https://github.com/ricardovaltierra/recipe-catalogue/issues">Request Feature</a>
   </p>
-  <h2 align="center"><a href="https://sweetrecipe.herokuapp.com/" target="_blank"><strong>Live version</strong></a></h2>
+  <h2 align="center"><a href="https://sweetrecipe.herokuapp.com/"><strong>Live version</strong></a></h2>
 
 
 ## Table of Contents
@@ -71,7 +71,7 @@ Once you liked a particular dish, it's time to watch the ingredients! Click on i
 
 To get a local copy up and running follow these simple steps.
 
-Clone or fork the <a href="https://github.com/ricardovaltierra/recipe-catalogue" target="_blank">repo</a> [git@github.com:ricardovaltierra/recipe-catalogue.git].
+Clone or fork the <a href="https://github.com/ricardovaltierra/recipe-catalogue">repo</a> [git@github.com:ricardovaltierra/recipe-catalogue.git].
 
 *note you need have install npm or yarn.
 * [npm](https://www.npmjs.com/get-npm)
