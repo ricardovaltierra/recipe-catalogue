@@ -1,6 +1,4 @@
 /* eslint-disable react/no-deprecated */
-/* eslint-disable camelcase */
-// ^ This one in particular is a PR for ESlint on https://github.com/eslint/eslint/issues/10503
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
@@ -22,10 +20,9 @@ class Detail extends React.Component {
     this.handleTabChange = this.handleTabChange.bind(this);
   }
 
-  UNSAFE_componentWillMount() {
+  componentWillMount() {
     try {
-      const { location } = this.props;
-      const { dish } = location;
+      const { dish } = this.props.location;
 
       const Preview = () => (
         <div className="detail-prev">
@@ -68,7 +65,7 @@ class Detail extends React.Component {
           <h2 className="detail-title">{dish.label}</h2>
           <div className="detail-ul-fa">
             {
-          Object.keys(dish.totalDaily).map(key => {
+          Object.keys(dish.totalDaily).map((key) => {
             const fact = dish.totalDaily[key];
             return (
               <p className="detail-li-fa" key={fact.label.substring(0, 2).concat(getRandomID())}>
@@ -90,29 +87,25 @@ class Detail extends React.Component {
         currentTab: <Preview />,
       });
     } catch (err) {
-      alert(err.message);
+      console.log(err.message);
     }
   }
 
   handleTabChange(e) {
     let currentTab = null;
     switch (e.target.innerHTML) {
-      case 'Preview': {
-        const { preview } = this.state;
-        currentTab = preview;
-        break; }
-      case 'Ingredients': {
-        const { ingredients } = this.state;
-        currentTab = ingredients;
-        break; }
-      case 'Facts': {
-        const { facts } = this.state;
-        currentTab = facts;
-        break; }
-      default: {
-        const { preview } = this.state;
-        currentTab = preview;
-        break; }
+      case 'Preview':
+        currentTab = this.state.preview;
+        break;
+      case 'Ingredients':
+        currentTab = this.state.ingredients;
+        break;
+      case 'Facts':
+        currentTab = this.state.facts;
+        break;
+      default:
+        currentTab = this.state.preview;
+        break;
     }
     this.setState({
       currentTab,
@@ -121,8 +114,6 @@ class Detail extends React.Component {
 
   render() {
     try {
-      const { dish, currentTab } = this.state;
-      const { image } = dish;
       return (
         <div className="detail-wrapper">
           <div className="nav-top">
@@ -132,14 +123,14 @@ class Detail extends React.Component {
             <p className="nav-title">maindish</p>
             <i className="nav-icon" />
           </div>
-          <span style={{ backgroundImage: `url(${image})` }} className="detail-img">
+          <span style={{ backgroundImage: `url(${this.state.dish.image})` }} className="detail-img">
             <div className="detail-tab">
-              <p><button type="button" className="tab-item" onClick={this.handleTabChange} onKeyDown={this.handleTabChange}>Preview</button></p>
-              <p><button type="button" className="tab-item" onClick={this.handleTabChange} onKeyDown={this.handleTabChange}>Ingredients</button></p>
-              <p><button type="button" className="tab-item" onClick={this.handleTabChange} onKeyDown={this.handleTabChange}>Facts</button></p>
+              <p className="tab-item" onClick={this.handleTabChange}>Preview</p>
+              <p className="tab-item" onClick={this.handleTabChange}>Ingredients</p>
+              <p className="tab-item" onClick={this.handleTabChange}>Facts</p>
             </div>
             <div className="details" id="details">
-              {currentTab}
+              {this.state.currentTab}
             </div>
           </span>
         </div>
@@ -162,22 +153,7 @@ class Detail extends React.Component {
 }
 
 Detail.propTypes = {
-  location: PropTypes.shape({
-    dish: PropTypes.shape({
-      label: PropTypes.string,
-      healthLabels: PropTypes.arrayOf(PropTypes.string),
-      ingredients: PropTypes.arrayOf(
-        PropTypes.oneOfType([
-          PropTypes.string,
-          PropTypes.number,
-          PropTypes.shape({}),
-        ]),
-      ),
-      totalDaily: PropTypes.shape({}),
-      calories: PropTypes.number,
-      source: PropTypes.string,
-    }),
-  }).isRequired,
+  location: PropTypes.object.isRequired,
 };
 
 export default Detail;

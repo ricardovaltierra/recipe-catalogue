@@ -1,13 +1,11 @@
 import React from 'react';
-import { PropTypes } from 'prop-types';
 
-class Navbar extends React.Component {
+export class Navbar extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       input: '',
-      hidden: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -23,40 +21,27 @@ class Navbar extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const { handleSearchDish } = this.props;
-    const { input } = this.state;
-    handleSearchDish(input || 'random');
+    this.props.handleSearchDish(this.state.input || 'random');
   }
 
   handleDropSearch() {
-    const { hidden } = this.state;
-    this.setState({
-      hidden: !hidden,
-    });
+    const dropdownSearch = document.getElementById('search-nav');
+    dropdownSearch.classList.toggle('hide');
   }
 
   render() {
-    const { hidden } = this.state;
-    const { input } = this.state;
-
     return (
       <div className="navbar">
         <div className="nav-top">
           <i className="gearicon nav-icon" />
           <p className="nav-title">maindish</p>
-          <i role="button" tabIndex={0} className="dropicon nav-icon" onClick={this.handleDropSearch} onKeyDown={this.handleDropSearch}>Q</i>
+          <i className="dropicon nav-icon" onClick={this.handleDropSearch}>Q</i>
         </div>
-        <div className={`search-bar ${hidden ? 'hide' : ''}`} id="search-nav">
-          <input className="search-input" onChange={this.handleChange} type="text" value={input} placeholder="Type a dish..." />
+        <div className="search-bar" id="search-nav">
+          <input className="search-input" onChange={this.handleChange} type="text" value={this.state.input} placeholder="Type a dish..." />
           <button className="search-button" type="button" onClick={this.handleSubmit}>Search</button>
         </div>
       </div>
     );
   }
 }
-
-Navbar.propTypes = {
-  handleSearchDish: PropTypes.func.isRequired,
-};
-
-export default Navbar;
