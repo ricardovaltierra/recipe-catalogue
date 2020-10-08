@@ -5,22 +5,23 @@ export class Navbar extends React.Component {
     super(props);
 
     this.state = {
-      input: '',
-    };
+      input: ''
+    }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDropSearch = this.handleDropSearch.bind(this);
   }
 
-  handleChange(e) {
+  handleChange(e){
     this.setState({
-      input: e.target.value,
+      input: e.target.value
     });
   }
 
-  handleSubmit(e) {
+  handleSubmit(e){
     e.preventDefault();
+    console.log(`Current input ${this.state.input || 'random'}`);
     this.props.handleSearchDish(this.state.input || 'random');
   }
 
@@ -31,17 +32,17 @@ export class Navbar extends React.Component {
 
   render() {
     return (
-      <div className="navbar">
-        <div className="nav-top">
-          <i className="gearicon nav-icon" />
-          <p className="nav-title">maindish</p>
-          <i className="dropicon nav-icon" onClick={this.handleDropSearch}>Q</i>
-        </div>
-        <div className="search-bar" id="search-nav">
-          <input className="search-input" onChange={this.handleChange} type="text" value={this.state.input} placeholder="Type a dish..." />
-          <button className="search-button" type="button" onClick={this.handleSubmit}>Search</button>
-        </div>
+    <div className='navbar'>
+      <div className='nav-top'>
+        <i className='gearicon nav-icon'></i>
+        <p className="nav-title">maindish</p>
+        <i className='dropicon nav-icon' onClick={this.handleDropSearch}>Q</i>
       </div>
+      <div className='search-bar' id ='search-nav'>
+        <input className='search-input' onChange={this.handleChange} type="text" value={this.state.input} placeholder='Type a dish...' />
+        <button className='search-button' type="button" onClick={this.handleSubmit}>Search</button>
+      </div>
+    </div>
     );
   }
 }

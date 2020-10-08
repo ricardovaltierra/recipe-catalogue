@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import DishList from '../containers/DishList';
-import Detail from './Detail';
+import Detail from '../components/Detail';
 
-const App = () => (
+const App = () =>(        
   <Router>
     <Switch>
       <Route exact path="/" component={DishList} />

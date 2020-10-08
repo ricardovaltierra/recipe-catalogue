@@ -5,7 +5,7 @@ import { GET_DISHES, GET_DISHES_SUCCESS, GET_DISHES_FAILURE } from '../helpers/a
 const startState = {
   loading: false,
   hasErrors: false,
-  dishes: [],
+  dishes: []
 };
 
 describe('dishes reducer', () => {
@@ -13,19 +13,19 @@ describe('dishes reducer', () => {
     expect(dishes(undefined, {})).toEqual({
       loading: false,
       hasErrors: false,
-      dishes: [],
+      dishes: []
     });
   });
 
   it('should handle GET_DISHES', () => {
     expect(
       dishes(startState, {
-        type: GET_DISHES,
-      }),
+        type: GET_DISHES
+      })
     ).toEqual({
       loading: true,
       hasErrors: false,
-      dishes: [],
+      dishes: []
     });
   });
 
@@ -33,25 +33,25 @@ describe('dishes reducer', () => {
     expect(
       dishes(startState, {
         type: GET_DISHES_SUCCESS,
-        payload: dishesSample,
-      }),
+        payload: dishesSample
+      })
     ).toEqual({
       loading: false,
       hasErrors: false,
-      dishes: dishesSample,
-    });
+      dishes: dishesSample
+    })
   });
 
   it('should handle GET_DISHES_FAILURE', () => {
     expect(
       dishes(startState, {
         type: GET_DISHES_FAILURE,
-        payload: dishesSample,
-      }),
+        payload: dishesSample
+      })
     ).toEqual({
       loading: false,
       hasErrors: true,
-      dishes: [],
-    });
+      dishes: []
+    })
   });
 });
