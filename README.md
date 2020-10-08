@@ -1,145 +1,69 @@
-# Recipe-catalogue
-
-<p align="center">
-  <img src="./assets/maindish.png" alt="maindish"  width="100">
-</p>
-
-> Microverse React & Redux Capstone Project.
-
-<p align="center">
-  <br>
-   <a href="https://github.com/ricardovaltierra/recipe-catalogue" target="_blank"><strong>Explore the repo »</strong></a>
-  <br>
-    <a href="https://github.com/ricardovaltierra/recipe-catalogue/issues" target="_blank">Request Feature</a>
-  </p>
-  <h2 align="center"><a href="https://sweetrecipe.herokuapp.com/" target="_blank"><strong>Live version</strong></a></h2>
-
-
-## Table of Contents
-
-* [About the Project](#about-the-project)
-
-* [Preview](#preview)
-
-* [Built With](#built-with)
-
-* [Getting Started](#getting-started)
-
-* [How it Works](#how-it-works)
-
-* [Contributing](#contributing)
-
-* [Contact](#contact)
-
-* [MIT License](#mit-license)
-
-* [Creative Commons License](#creative-commons-license)
-
-## About The Project
-
-Small React-based mobile app to search for a catalogue of meals that you want to find for cooking. Type the dish that you want and look over a catalogue of all the possible options (e.g. 'Pizza Dough', 'Chorizo, caper & rocket pizza
-' or 'Pizza Roll-Up').
-
-Once you liked a particular dish, it's time to watch the ingredients! Click on it and watch the details.
-
-## Preview
-
-<img src="assets/usage_1.gif" alt="Main page tour" width="400"/>
-
-<img src="assets/usage_2.gif" alt="Main page and search" width="400"/>
-
-<img src="assets/usage_3.gif" alt="Detail page with tabs" width="400"/>
-
-### Built With
-
-* [React](https://reactjs.org/)
-
-* [Redux](https://redux.js.org/)
-
-* [ES6](https://es6.io/)
-
-* [SASS](https://sass-lang.com/)
-
-* [Redux-thunk & Router](https://webpack.js.org/)
-
-* npm Packages used:
-    * [ESLint](https://eslint.org/)
-    * [StyleLint](https://stylelint.io/)
-    * [Babel](https://babeljs.io/)
-    * [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-
-## Getting Started
-
-To get a local copy up and running follow these simple steps.
-
-Clone or fork the <a href="https://github.com/ricardovaltierra/recipe-catalogue" target="_blank">repo</a> [git@github.com:ricardovaltierra/recipe-catalogue.git].
-
-*note you need have install npm or yarn.
-* [npm](https://www.npmjs.com/get-npm)
-* [yarn](https://classic.yarnpkg.com/en/docs/install)
-
-## How it Works
-
-This webpage is built on React & Redux basis with ES6, SASS and some other dependencies. All of the resources (images and gifs) are located inside `/assets` and `/src/styles/icons` folders.
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Running the code
+## Available Scripts
 
-*   Navigate to the root directory of the project.
+In the project directory, you can run:
 
-*   Run this command on your terminal to add all the required packages and dependencies.
-    ```
-    $ npm install
-    ```
-*   Once that build with.
-    ```
-    $ npm run build
-    ```
-*   Now the app is ready, you can just open the generated index file on your server.
-    ```
-    $ npm start
-    ```
-*   If you're onto make some code edition you can 'watch' the live changes as follows.
-    ```
-    $ npm run watch
-    ```
-*   Curious about testing? Run it for the main reducer and actions (with a small `navbar` component test)
-    ```
-    $ npm test (filename.test.js)?
-    ```      
-   
-## Contributing
+### `yarn start`
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-1. Fork the Project.
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
 
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+### `yarn test`
 
-4. Push to the Branch (`git push origin feature/AmazingFeature`).
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-5. Open a Pull Request.
+### `yarn build`
 
-## Contact
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Ricardo Valtierra - [@RicardoValtie15](https://twitter.com/RicardoValtie15) - ricardo_valtierra@outlook.com  - [linkedin.com/in/ricardovaltierra/](https://www.linkedin.com/in/ricardovaltierra/)
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-## MIT License
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-This project is under the [MIT](LICENSE) license.
+### `yarn eject`
 
-## Creative Commons License
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-"NomNom" by [Marc-Antoine Roy](https://www.behance.net/enfantroy) is licensed under a [Creative Commons Attribution-ShareAlike 4.0
-International License][cc-by-sa].
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
-[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
-[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `yarn build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
