@@ -13,15 +13,20 @@ const getDishesSuccess = dishes => ({
 });
 const getDishesFailure = () => ({ type: GET_DISHES_FAILURE });
 
-function fetchAllDishes(dishToSearch = 'random') {
-  return dispatch => {
-    dispatch(getDishes())
-    return fetch(
-      `https://api.edamam.com/search?app_id=${APP_ID}&app_key=${APP_KEY}&q=${dishToSearch}`
-    ).then(res => res.json())
-    .then(body => dispatch(getDishesSuccess(body.hits)))
-    .catch(() => dispatch(getDishesFailure()))
+const fetchAllDishes = (dishToSearch = 'random') => {
+  console.log(`lof grom fetchAllDishes receive -> ${dishToSearch}`);
+  return async (dispatch) => {
+    dispatch(getDishes());
+    try {
+      const response = await fetch(
+        `https://api.edamam.com/search?app_id=${APP_ID}&app_key=${APP_KEY}&q=${dishToSearch}`
+      );
+      const Data = await response.json();
+      dispatch(getDishesSuccess(Data.hits));
+    } catch (error) {
+      dispatch(getDishesFailure());
+    }
   }
-}
+};
 
 export { getDishes, getDishesSuccess, getDishesFailure, fetchAllDishes, searchDish };
