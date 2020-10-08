@@ -1,83 +1,81 @@
 $gray1: #c6c6c6;
 
-  .nav-top {
-    position: fixed;
+.nav-top {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  background-color: #000;
+  text-align: center;
+  height: 2.2em;
+
+  .gearicon {
+    color: transparent;
+    background: url('../icons/gear.png') no-repeat center;
     width: 100%;
-    z-index: 999;
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-    background-color: #000;
-    text-align: center;
-    height: 2.2em;
-
-    .gearicon {
-      color: transparent;
-      background: url('../icons/gear.png') no-repeat center;
-      width: 100%;
-      height: 100%;
-      background-size: 1.3rem;
-    }
-
-    .nav-icon {
-      color: $gray1;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-    }
-
-    .dropicon {
-      color: transparent;
-      background: url('../icons/search.png') no-repeat center;
-      width: 100%;
-      height: 100%;
-      background-size: 1.3rem;
-    }
-  
-    .nav-title {
-      position: relative;
-      font-size: 18px;
-      padding-top: 0.6em;
-      color: #fffbb1;
-    }
+    height: 100%;
+    background-size: 1.3rem;
   }
 
-  .search-bar {
+  .nav-icon {
+    color: $gray1;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropicon {
+    color: transparent;
+    background: url('../icons/search.png') no-repeat center;
+    width: 100%;
+    height: 100%;
+    background-size: 1.3rem;
+  }
+
+  .nav-title {
     position: relative;
-    margin-top: 2.2rem;
-    width: 100%;
-    z-index: 999;
-    display: grid;
-    grid-template-columns: 80% 20%;
-    justify-content: center;
-    color: white;
-    padding: 5px;
-    text-decoration: none;
-    height: 2.2em;
+    font-size: 18px;
+    padding-top: 0.6em;
+    color: #fffbb1;
+  }
+}
 
-    .search-input {
-      position: relative;
-      border: none;
-      padding-left: 10px;
-      font-size: 12px;
-    }
+.search-bar {
+  position: relative;
+  margin-top: 2.2rem;
+  width: 100%;
+  z-index: 999;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  justify-content: center;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  height: 2.2em;
 
-    .search-button {
-      position: relative;
-      border: none;
-      padding: 5px;
-      font-size: 12px;
-    }
+  .search-input {
+    position: relative;
+    border: none;
+    padding-left: 10px;
+    font-size: 12px;
   }
 
+  .search-button {
+    position: relative;
+    border: none;
+    padding: 5px;
+    font-size: 12px;
+  }
+}
 
 .item-list {
-
   .menu-item {
     position: relative;
     text-decoration: none;
     color: white;
 
-    .item-img{
+    .item-img {
       position: relative;
       display: grid;
       height: 30vh;
@@ -87,9 +85,9 @@ $gray1: #c6c6c6;
       align-items: end;
       font-family: 'Open Sans', sans-serif;
 
-      .item-description{
+      .item-description {
         position: relative;
-        background: rgba(0,0,0,0.7);
+        background: rgba(0, 0, 0, 0.7);
         max-height: 38%;
         padding: 0.8rem;
         font-size: 12px;
@@ -110,15 +108,15 @@ $gray1: #c6c6c6;
             position: relative;
             margin-right: 0.5rem;
           }
+
           .item-ingredient {
             position: relative;
             margin-left: 0.5rem;
-
           }
         }
       }
 
-      .item-description:hover { 
+      .item-description:hover {
         max-height: 48%;
       }
     }

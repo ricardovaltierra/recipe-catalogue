@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-export const Dish = ({ dish }) => (
+const Dish = ({ dish }) => (
   <Link
     key={dish.recipe.uri}
     to={{
@@ -32,5 +32,16 @@ export const Dish = ({ dish }) => (
 );
 
 Dish.propTypes = {
-  dish: PropTypes.any.isRequired,
+  dish: PropTypes.shape({
+    bookmarked: PropTypes.bool,
+    bought: PropTypes.bool,
+    recipe: PropTypes.objectOf(PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string,
+      PropTypes.object,
+      PropTypes.array,
+    ])).isRequired,
+  }).isRequired,
 };
+
+export default Dish;
