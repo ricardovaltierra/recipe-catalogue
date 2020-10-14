@@ -44,11 +44,7 @@ Once you liked a particular dish, it's time to watch the ingredients! Click on i
 
 ## Preview
 
-<img src="assets/usage_1.gif" alt="Main page tour" width="400"/>
-
-<img src="assets/usage_2.gif" alt="Main page and search" width="400"/>
-
-<img src="assets/usage_3.gif" alt="Detail page with tabs" width="400"/>
+<img src="assets/usage_1.gif" alt="Main page tour" width="200"/>' '<img src="assets/usage_2.gif" alt="Main page and search" width="200"/>
 
 ### Built With
 
