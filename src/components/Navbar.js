@@ -56,7 +56,8 @@ class Navbar extends React.Component {
 }
 
 Navbar.propTypes = {
-  handleSearchDish: PropTypes.func.isRequired,
+  /* eslint-disable react/require-default-props */
+  handleSearchDish: PropTypes.func,
 };
 
 export default Navbar;

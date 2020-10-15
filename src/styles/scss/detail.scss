@@ -1,16 +1,15 @@
 
 @media only screen and (min-width: 320px) {
-
   .detail-wrapper {
     width: 100%;
     min-height: 100%;
     color: white;
-  
+
     a {
       color: $gray1;
       text-decoration: none;
       cursor: pointer;
-  
+
       .arrowicon {
         color: transparent;
         background: url('../icons/arrow.png') no-repeat center;
@@ -21,7 +20,7 @@
         padding-bottom: 0.1rem;
       }
     }
-  
+
     .detail-img {
       position: relative;
       margin-top: 2.2rem;
@@ -32,7 +31,7 @@
       background-size: cover;
       background-position: center;
       font-family: 'Handlee', cursive;
-  
+
       .detail-tab {
         position: relative;
         display: grid;
@@ -44,7 +43,7 @@
         font-size: 14px;
         font-family: 'Handlee', cursive;
         text-align: center;
-  
+
         .tab-item {
           position: relative;
           width: 100%;
@@ -53,17 +52,17 @@
           font-family: 'Handlee', cursive;
           border: none;
         }
-  
+
         .tab-item:hover {
           border: none;
         }
-  
+
         .tab-item:active {
           color: #000;
           border: none;
         }
       }
-  
+
       .details {
         position: relative;
         background: rgba(0, 0, 0, 0.8);
@@ -71,15 +70,15 @@
         max-height: 91%;
         overflow: auto;
         padding: 1.5vh;
-  
+
         .detail-title {
           font-family: 'Open Sans', sans-serif;
           font-size: 13px;
         }
-  
+
         .detail-prev {
           font-size: 12px;
-  
+
           .detail-main {
             position: relative;
             display: grid;
@@ -87,18 +86,18 @@
             grid-template-columns: 80% auto;
             align-items: center;
             margin-bottom: 1vh;
-  
+
             .detail-calories {
               text-align: center;
             }
           }
-  
+
           .detail-source {
             font-size: 11px;
             color: rgba(196, 196, 196, 0.959);
           }
         }
-  
+
         .detail-ingredients {
           .detail-ul-hl {
             position: relative;
@@ -109,7 +108,7 @@
             font-family: 'Open Sans', sans-serif;
             font-size: 12px;
             margin: 0.4rem 0;
-  
+
             .detail-li-hl {
               border-radius: 40px;
               padding: 0.2rem;
@@ -118,7 +117,7 @@
               background: rgb(241, 241, 241);
             }
           }
-  
+
           .detail-ul-ig {
             .detail-li-ig {
               position: relative;
@@ -128,12 +127,12 @@
               padding: 0.2rem;
               overflow: visible;
               font-size: 13px;
-  
+
               .check-ig {
                 margin-top: 0.2rem;
                 background: none;
               }
-  
+
               label {
                 margin: 0.2rem;
                 padding-top: 0.1rem;
@@ -141,23 +140,23 @@
             }
           }
         }
-  
+
         .detail-facts {
           .detail-ul-fa {
             position: relative;
             margin-top: 1rem;
             font-size: 12px;
-  
+
             .detail-li-fa {
               position: relative;
               display: grid;
               grid-template-columns: 50% auto;
               margin-top: 0.2rem;
-  
+
               strong {
                 font-family: 'Open Sans', sans-serif;
               }
-  
+
               span {
                 text-align: right;
               }
@@ -166,7 +165,7 @@
         }
       }
     }
-  
+
     .detail-error {
       position: relative;
       margin: 10rem 5rem;

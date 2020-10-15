@@ -1,7 +1,6 @@
 $gray1: #c6c6c6;
 
 @media only screen and (min-width: 320px) {
-
   .nav-top {
     position: fixed;
     width: 100%;
@@ -11,7 +10,7 @@ $gray1: #c6c6c6;
     background-color: #000;
     text-align: center;
     height: 2.2em;
-  
+
     .gearicon {
       color: transparent;
       background: url('../icons/gear.png') no-repeat center;
@@ -19,14 +18,14 @@ $gray1: #c6c6c6;
       height: 100%;
       background-size: 1.3rem;
     }
-  
+
     .nav-icon {
       color: $gray1;
       font-size: 16px;
       border: none;
       cursor: pointer;
     }
-  
+
     .dropicon {
       color: transparent;
       background: url('../icons/search.png') no-repeat center;
@@ -34,7 +33,7 @@ $gray1: #c6c6c6;
       height: 100%;
       background-size: 1.3rem;
     }
-  
+
     .nav-title {
       position: relative;
       font-size: 18px;
@@ -42,7 +41,7 @@ $gray1: #c6c6c6;
       color: #fffbb1;
     }
   }
-  
+
   .search-bar {
     position: relative;
     margin-top: 2.2rem;
@@ -55,14 +54,14 @@ $gray1: #c6c6c6;
     padding: 5px;
     text-decoration: none;
     height: 2.2em;
-  
+
     .search-input {
       position: relative;
       border: none;
       padding-left: 10px;
       font-size: 12px;
     }
-  
+
     .search-button {
       position: relative;
       border: none;
@@ -70,13 +69,13 @@ $gray1: #c6c6c6;
       font-size: 12px;
     }
   }
-  
+
   .item-list {
     .menu-item {
       position: relative;
       text-decoration: none;
       color: white;
-  
+
       .item-img {
         position: relative;
         display: grid;
@@ -86,7 +85,7 @@ $gray1: #c6c6c6;
         background-size: cover;
         align-items: end;
         font-family: 'Open Sans', sans-serif;
-  
+
         .item-description {
           position: relative;
           background: rgba(0, 0, 0, 0.7);
@@ -94,39 +93,38 @@ $gray1: #c6c6c6;
           padding: 0.8rem;
           font-size: 12px;
           overflow: hidden;
-  
+
           .item-title {
             position: relative;
             margin-bottom: 0.4rem;
           }
-  
+
           .item-cal-ing {
             position: relative;
             display: flex;
             font-family: 'Handlee', cursive;
             font-size: 12px;
-  
+
             .item-calories {
               position: relative;
               margin-right: 0.5rem;
             }
-  
+
             .item-ingredient {
               position: relative;
               margin-left: 0.5rem;
             }
           }
         }
-  
+
         .item-description:hover {
           max-height: 48%;
         }
       }
     }
   }
-  
+
   .hide {
     display: none;
   }
 }
-
