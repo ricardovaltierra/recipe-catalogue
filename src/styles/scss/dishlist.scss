@@ -1,5 +1,6 @@
 $gray1: #c6c6c6;
 
+@media only screen and (min-width: 320px) {
   .nav-top {
     position: fixed;
     width: 100%;
@@ -32,7 +33,7 @@ $gray1: #c6c6c6;
       height: 100%;
       background-size: 1.3rem;
     }
-  
+
     .nav-title {
       position: relative;
       font-size: 18px;
@@ -45,7 +46,7 @@ $gray1: #c6c6c6;
     position: relative;
     margin-top: 2.2rem;
     width: 100%;
-    z-index: 999;
+    z-index: 1;
     display: grid;
     grid-template-columns: 80% 20%;
     justify-content: center;
@@ -69,62 +70,61 @@ $gray1: #c6c6c6;
     }
   }
 
-
-.item-list {
-
-  .menu-item {
-    position: relative;
-    text-decoration: none;
-    color: white;
-
-    .item-img{
+  .item-list {
+    .menu-item {
       position: relative;
-      display: grid;
-      height: 30vh;
-      background-color: #000;
-      background-repeat: no-repeat;
-      background-size: cover;
-      align-items: end;
-      font-family: 'Open Sans', sans-serif;
+      text-decoration: none;
+      color: white;
 
-      .item-description{
+      .item-img {
         position: relative;
-        background: rgba(0,0,0,0.7);
-        max-height: 38%;
-        padding: 0.8rem;
-        font-size: 12px;
-        overflow: hidden;
+        display: grid;
+        height: 30vh;
+        background-color: #000;
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-items: end;
+        font-family: 'Open Sans', sans-serif;
 
-        .item-title {
+        .item-description {
           position: relative;
-          margin-bottom: 0.4rem;
-        }
-
-        .item-cal-ing {
-          position: relative;
-          display: flex;
-          font-family: 'Handlee', cursive;
+          background: rgba(0, 0, 0, 0.7);
+          max-height: 38%;
+          padding: 0.8rem;
           font-size: 12px;
+          overflow: hidden;
 
-          .item-calories {
+          .item-title {
             position: relative;
-            margin-right: 0.5rem;
+            margin-bottom: 0.4rem;
           }
-          .item-ingredient {
-            position: relative;
-            margin-left: 0.5rem;
 
+          .item-cal-ing {
+            position: relative;
+            display: flex;
+            font-family: 'Handlee', cursive;
+            font-size: 12px;
+
+            .item-calories {
+              position: relative;
+              margin-right: 0.5rem;
+            }
+
+            .item-ingredient {
+              position: relative;
+              margin-left: 0.5rem;
+            }
           }
         }
-      }
 
-      .item-description:hover { 
-        max-height: 48%;
+        .item-description:hover {
+          max-height: 48%;
+        }
       }
     }
   }
-}
 
-.hide {
-  display: none;
+  .hide {
+    display: none;
+  }
 }

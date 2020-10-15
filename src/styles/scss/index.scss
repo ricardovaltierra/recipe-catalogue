@@ -3,27 +3,47 @@
 @import './detail.scss';
 @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Open+Sans:wght@600&family=Secular+One&display=swap');
 
-body {
-  position: relative;
-  display: grid;
-  background-color: #ccc;
-  height: 100vh;
-
-  #root {
+@media only screen and (max-width: 415px) {
+  body {
     position: relative;
-    display: flex;
-    width: 100%;
-    min-width: 100%;
-    
-    font-family: 'Secular One', sans-serif;
+    display: grid;
+    background-color: #ccc;
+    height: 100vh;
 
-      .main-wrapper{
+    #root {
+      position: relative;
+      display: flex;
+      width: 100%;
+      min-width: 100%;
+      font-family: 'Secular One', sans-serif;
+
+      .main-wrapper {
         position: relative;
         display: flex;
         flex-direction: column;
         min-width: 100%;
-        
       }
+    }
   }
 }
 
+@media only screen and (min-width: 416px) {
+  #root {
+    margin: 130px auto;
+    max-height: 700px;
+    overflow: auto;
+  }
+
+  .nav-top {
+    margin-top: -36px;
+  }
+
+  #root,
+  .nav-top {
+    max-width: 414px;
+  }
+
+  .detail-wrapper .detail-img {
+    height: 70vh;
+  }
+}
