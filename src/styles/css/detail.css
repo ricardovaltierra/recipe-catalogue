@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$gray1".
-        on line 8 of src/styles/scss/detail.scss
+        on line 10 of src/styles/scss/detail.scss
 
-3:   width: 100%;
-4:   min-height: 100%;
-5:   color: white;
-6:
-7:   a {
-8:     color: $gray1;
-9:     text-decoration: none;
-10:     cursor: pointer;
-11:
-12:     .arrowicon {
-13:       color: transparent;
+5:     width: 100%;
+6:     min-height: 100%;
+7:     color: white;
+8:   
+9:     a {
+10:       color: $gray1;
+11:       text-decoration: none;
+12:       cursor: pointer;
+13:   
+14:       .arrowicon {
+15:         color: transparent;
 
 Backtrace:
-src/styles/scss/detail.scss:8
+src/styles/scss/detail.scss:10
 /home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/variable.rb:49:in `_perform'
 /home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/node.rb:50:in `perform'
 /home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:398:in `visit_prop'
@@ -54,6 +54,20 @@ src/styles/scss/detail.scss:8
 /home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
 /home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
 /home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:524:in `visit_media'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
 /home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
 /home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
 /home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
@@ -66,18 +80,18 @@ src/styles/scss/detail.scss:8
 /home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
 /home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
 /home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:294:in `watch'
-/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin.rb:109:in `method_missing'
-/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:358:in `watch_or_update'
-/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
-/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
-/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
-/home/ricardo/.rbenv/versions/2.6.4/bin/sass:23:in `load'
-/home/ricardo/.rbenv/versions/2.6.4/bin/sass:23:in `<main>'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+/home/ricardo/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
 */
-body::before {
+body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$gray1\".\A         on line 8 of src/styles/scss/detail.scss\A \A 3:   width: 100%;\A 4:   min-height: 100%;\A 5:   color: white;\A 6: \A 7:   a {\A 8:     color: $gray1;\A 9:     text-decoration: none;\A 10:     cursor: pointer;\A 11: \A 12:     .arrowicon {\A 13:       color: transparent;";
-}
+  content: "Error: Undefined variable: \"$gray1\".\A         on line 10 of src/styles/scss/detail.scss\A \A 5:     width: 100%;\A 6:     min-height: 100%;\A 7:     color: white;\A 8:   \A 9:     a {\A 10:       color: $gray1;\A 11:       text-decoration: none;\A 12:       cursor: pointer;\A 13:   \A 14:       .arrowicon {\A 15:         color: transparent;"; }

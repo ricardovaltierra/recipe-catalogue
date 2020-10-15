@@ -1,174 +1,177 @@
 
-.detail-wrapper {
-  width: 100%;
-  min-height: 100%;
-  color: white;
+@media only screen and (min-width: 320px) {
 
-  a {
-    color: $gray1;
-    text-decoration: none;
-    cursor: pointer;
-
-    .arrowicon {
-      color: transparent;
-      background: url('../icons/arrow.png') no-repeat center;
-      width: 100%;
-      height: 100%;
-      font-size: 32px;
-      background-size: 1.3rem;
-      padding-bottom: 0.1rem;
-    }
-  }
-
-  .detail-img {
-    position: relative;
-    margin-top: 2.2rem;
-    display: grid;
-    height: 96vh;
-    background-color: #000;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    font-family: 'Handlee', cursive;
-
-    .detail-tab {
-      position: relative;
-      display: grid;
-      grid-template-columns: repeat(3, auto);
-      max-height: 7vh;
-      align-items: center;
-      justify-items: center;
-      background: rgba(0, 0, 0, 0.7);
-      font-size: 14px;
-      font-family: 'Handlee', cursive;
-      text-align: center;
-
-      .tab-item {
-        position: relative;
+  .detail-wrapper {
+    width: 100%;
+    min-height: 100%;
+    color: white;
+  
+    a {
+      color: $gray1;
+      text-decoration: none;
+      cursor: pointer;
+  
+      .arrowicon {
+        color: transparent;
+        background: url('../icons/arrow.png') no-repeat center;
         width: 100%;
-        background: none;
-        color: white;
-        font-family: 'Handlee', cursive;
-        border: none;
-      }
-
-      .tab-item:hover {
-        border: none;
-      }
-
-      .tab-item:active {
-        color: #000;
-        border: none;
+        height: 100%;
+        font-size: 32px;
+        background-size: 1.3rem;
+        padding-bottom: 0.1rem;
       }
     }
-
-    .details {
+  
+    .detail-img {
       position: relative;
-      background: rgba(0, 0, 0, 0.8);
-      align-self: end;
-      max-height: 91%;
-      overflow: auto;
-      padding: 1.5vh;
-
-      .detail-title {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 13px;
-      }
-
-      .detail-prev {
-        font-size: 12px;
-
-        .detail-main {
+      margin-top: 2.2rem;
+      display: grid;
+      height: 96vh;
+      background-color: #000;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      font-family: 'Handlee', cursive;
+  
+      .detail-tab {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        max-height: 7vh;
+        align-items: center;
+        justify-items: center;
+        background: rgba(0, 0, 0, 0.7);
+        font-size: 14px;
+        font-family: 'Handlee', cursive;
+        text-align: center;
+  
+        .tab-item {
           position: relative;
-          display: grid;
           width: 100%;
-          grid-template-columns: 80% auto;
-          align-items: center;
-          margin-bottom: 1vh;
-
-          .detail-calories {
-            text-align: center;
-          }
+          background: none;
+          color: white;
+          font-family: 'Handlee', cursive;
+          border: none;
         }
-
-        .detail-source {
-          font-size: 11px;
-          color: rgba(196, 196, 196, 0.959);
+  
+        .tab-item:hover {
+          border: none;
+        }
+  
+        .tab-item:active {
+          color: #000;
+          border: none;
         }
       }
-
-      .detail-ingredients {
-        .detail-ul-hl {
-          position: relative;
-          display: flex;
-          justify-content: center;
-          max-height: 27px;
-          gap: 1rem;
+  
+      .details {
+        position: relative;
+        background: rgba(0, 0, 0, 0.8);
+        align-self: end;
+        max-height: 91%;
+        overflow: auto;
+        padding: 1.5vh;
+  
+        .detail-title {
           font-family: 'Open Sans', sans-serif;
-          font-size: 12px;
-          margin: 0.4rem 0;
-
-          .detail-li-hl {
-            border-radius: 40px;
-            padding: 0.2rem;
-            text-align: center;
-            color: rgba(0, 0, 0, 0.7);
-            background: rgb(241, 241, 241);
-          }
+          font-size: 13px;
         }
-
-        .detail-ul-ig {
-          .detail-li-ig {
-            position: relative;
-            display: flex;
-            width: 100%;
-            height: 100%;
-            padding: 0.2rem;
-            overflow: visible;
-            font-size: 13px;
-
-            .check-ig {
-              margin-top: 0.2rem;
-              background: none;
-            }
-
-            label {
-              margin: 0.2rem;
-              padding-top: 0.1rem;
-            }
-          }
-        }
-      }
-
-      .detail-facts {
-        .detail-ul-fa {
-          position: relative;
-          margin-top: 1rem;
+  
+        .detail-prev {
           font-size: 12px;
-
-          .detail-li-fa {
+  
+          .detail-main {
             position: relative;
             display: grid;
-            grid-template-columns: 50% auto;
-            margin-top: 0.2rem;
-
-            strong {
-              font-family: 'Open Sans', sans-serif;
+            width: 100%;
+            grid-template-columns: 80% auto;
+            align-items: center;
+            margin-bottom: 1vh;
+  
+            .detail-calories {
+              text-align: center;
             }
-
-            span {
-              text-align: right;
+          }
+  
+          .detail-source {
+            font-size: 11px;
+            color: rgba(196, 196, 196, 0.959);
+          }
+        }
+  
+        .detail-ingredients {
+          .detail-ul-hl {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            max-height: 27px;
+            gap: 1rem;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
+            margin: 0.4rem 0;
+  
+            .detail-li-hl {
+              border-radius: 40px;
+              padding: 0.2rem;
+              text-align: center;
+              color: rgba(0, 0, 0, 0.7);
+              background: rgb(241, 241, 241);
+            }
+          }
+  
+          .detail-ul-ig {
+            .detail-li-ig {
+              position: relative;
+              display: flex;
+              width: 100%;
+              height: 100%;
+              padding: 0.2rem;
+              overflow: visible;
+              font-size: 13px;
+  
+              .check-ig {
+                margin-top: 0.2rem;
+                background: none;
+              }
+  
+              label {
+                margin: 0.2rem;
+                padding-top: 0.1rem;
+              }
+            }
+          }
+        }
+  
+        .detail-facts {
+          .detail-ul-fa {
+            position: relative;
+            margin-top: 1rem;
+            font-size: 12px;
+  
+            .detail-li-fa {
+              position: relative;
+              display: grid;
+              grid-template-columns: 50% auto;
+              margin-top: 0.2rem;
+  
+              strong {
+                font-family: 'Open Sans', sans-serif;
+              }
+  
+              span {
+                text-align: right;
+              }
             }
           }
         }
       }
     }
-  }
-
-  .detail-error {
-    position: relative;
-    margin: 10rem 5rem;
-    text-align: center;
-    color: rgb(32, 32, 32);
+  
+    .detail-error {
+      position: relative;
+      margin: 10rem 5rem;
+      text-align: center;
+      color: rgb(32, 32, 32);
+    }
   }
 }
